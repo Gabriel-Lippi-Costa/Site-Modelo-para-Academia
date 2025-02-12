@@ -1,5 +1,7 @@
 @charset "UTF-8";
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 * {
     margin: 0px;
     padding: 0px;
@@ -9,12 +11,7 @@
 html,
 body {
     overflow-x: hidden;
-    height: 2000px;
-}
-
-html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 70px;
+    background-color: black;
 }
 
 html {
@@ -110,15 +107,235 @@ header .mobile-menu.active .line3 {
 }
 
 #inicio {
+    background-image: url(inicio/img-um-grande.jpg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 500px;
+    margin-top: 8vh;
+}
+
+/*COMEÇO SOBRE NOS*/
+
+.txt-animado {
+    font-size: 35px;
+    font-family: "Poppins", serif;
+    font-weight: 500;
+    font-style: italic;
+    text-align: center;
+    margin-top: 10px;
+    padding: 20px;
+    color: white;
+}
+
+.txt-animado span {
+    position: relative;
+}
+
+.txt-animado span::before {
+    content: "";
+    color: greenyellow;
+    animation: palavras 20s infinite;
+}
+
+.txt-animado span::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    border-left: 2px solid greenyellow;
+    right: -10px;
+    opacity: 1;
+    animation: ponteiro .8s infinite, digita 20s steps(15) infinite;
+    width: calc(100% + 10px);
     background-color: black;
-    height: 100vh;
 }
 
-#inicio .parte-de-cima {
-   
+@keyframes palavras {
+
+    0%,
+    20% {
+        content: "Força";
+    }
+
+    21%,
+    40% {
+        content: "Saúde";
+    }
+
+    41%,
+    60% {
+        content: "Perder Peso";
+    }
+
+    61%,
+    80% {
+        content: "Autoestima";
+    }
+
+    81%,
+    100% {
+        content: "Músculo";
+    }
+
+
+
+}
+
+@keyframes digita {
+
+    10%,
+    15%,
+    30%,
+    35%,
+    50%,
+    55%,
+    70%,
+    75%,
+    90%,
+    95% {
+        width: 0;
+    }
+
+    5%,
+    20%,
+    25%,
+    40%,
+    45%,
+    60%,
+    65%,
+    80%,
+    85% {
+        width: calc(100% + 10px);
+    }
+}
+
+@keyframes ponteiro {
+    0% {
+        border-left: 2px solid #292929;
+    }
 }
 
 
+
+#sobre-nos {
+    margin: 70px 0px;
+    display: grid;
+}
+
+#sobre-nos h1 {
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    color: white;
+    font-size: 3em;
+    text-shadow: greenyellow 1px 0 10px;
+}
+
+.img-sobre-nos {
+    display: flex;
+}
+
+.img-sobre-nos img {
+    margin: 30px auto 30px auto;
+    max-width: 700px;
+    width: 90%;
+    border-radius: 20px;
+    border: 2px solid gray;
+    box-shadow: rgba(255, 255, 255, 0.35) 0px 5px 15px;
+}
+
+.breve-apresentacao {
+    color: white;
+    text-align: center;
+    padding: 10px;
+    line-height: 1.3;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.4em;
+}
+
+/*FIM SOBRE NOS*/
+
+
+/*COMEÇO MODALIDADES*/
+
+#modalidades {
+    margin: 70px 0px;
+    display: grid;
+}
+
+#modalidades h1 {
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    color: white;
+    font-size: 3em;
+    text-shadow: greenyellow 1px 0 10px;
+}
+
+section.cards {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    /* Espaçamento entre os cards */
+}
+
+section.cards>.card {
+    padding: 15px;
+    border-radius: 10px;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    /* Padrão: Um abaixo do outro */
+    max-width: 300px;
+    /* Define um tamanho máximo para os cards */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section.cards>.card:hover {
+    transform: scale(1.05); /* Aumenta o card */
+    box-shadow: rgba(255, 255, 255, 0.5) 0px 10px 20px; /* Sombra mais intensa */
+    cursor: pointer;
+}
+
+section.cards>.card>h3 {
+    color: white;
+    font-size: 1.6em;
+    margin: 5px 0px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+section.cards img {
+    box-shadow: rgba(255, 255, 255, 0.35) 0px 5px 15px;
+    width: 250px;
+    border-radius: 20px;
+}
+
+
+/*FIM MODALDIDADES*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    section.cards>.card {
+        width: calc(50% - 15px);
+        /* 2 por linha */
+    }
+}
+
+/* Para notebooks e TVs (acima de 1024px) */
+@media (min-width: 1025px) {
+    section.cards {
+        max-width: 920px;
+        /* Limita o tamanho total do contêiner */
+        margin: 0 auto;
+        /* Centraliza os cards na tela */
+    }
+
+    section.cards>.card {
+        width: calc(33.33% - 15px);
+        /* 3 por linha */
+    }
+}
 
 @media (max-width: 999px) {
     body {
@@ -131,7 +348,7 @@ header .mobile-menu.active .line3 {
         right: 0;
         width: 50vw;
         height: 92vh;
-        background: rgba(0, 0, 0, 0.5);
+        background: rgba(0, 0, 0, 0.866);
         backdrop-filter: blur(10px);
         flex-direction: column;
         align-items: center;

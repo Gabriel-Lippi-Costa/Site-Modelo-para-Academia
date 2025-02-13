@@ -390,6 +390,7 @@ section.cards img {
 }
 
 #contatos h1 {
+    margin-bottom: 10px;
     font-family: 'Times New Roman', Times, serif;
     text-align: center;
     color: white;

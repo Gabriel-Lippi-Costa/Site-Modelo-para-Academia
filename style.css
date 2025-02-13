@@ -315,6 +315,32 @@ section.cards img {
 
 /*FIM MODALDIDADES*/
 
+#planos {
+    margin: 70px 0px;
+    display: grid;
+}
+
+#planos h1 {
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    color: white;
+    font-size: 3em;
+    text-shadow: greenyellow 1px 0 10px;
+}
+
+#planos p {
+    color: white;
+    text-align: left;
+    padding: 10px;
+    line-height: 1.2;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.4em;
+}
+
+/*COMEÇO PLANOS*/
+
+/*FIM PLANOS*/
+
 @media (min-width: 768px) and (max-width: 1024px) {
     section.cards>.card {
         width: calc(50% - 15px);

@@ -61,7 +61,7 @@ header .nav-list {
 
 header .nav-list li {
     font-family: "Merienda", serif;
-    font-size: 26px;
+    font-size: 18px;
     margin-left: 32px;
 }
 
@@ -116,6 +116,13 @@ header .mobile-menu.active .line3 {
     margin-top: 8vh;
 }
 
+@supports (-webkit-touch-callout: none) {
+    #inicio {
+        background-position: top center;
+        background-size: cover;
+        background-attachment: scroll;
+    }
+}
 /*COMEÇO SOBRE NOS*/
 
 .txt-animado {

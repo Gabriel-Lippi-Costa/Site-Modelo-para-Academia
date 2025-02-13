@@ -31,23 +31,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $corpo .= "Mensagem: $msg\n";
 
     // Cabeçalhos do e-mail
-    $headers = "From: no-reply@seudominio.com\r\n";
+    $headers = "From: Elite Fit <no-reply@seudominio.com>\r\n";
     $headers .= "Reply-To: $email\r\n";
     $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
+    $headers .= "X-Mailer: PHP/" . phpversion();
 
     // Tenta enviar o e-mail
-    try {
-        if (mail($para, $assunto, $corpo, $headers)) {
-            $_SESSION['form_enviado'] = true;
-            header("Location: sucesso.html");
-            exit;
-        } else {
-            $_SESSION['form_enviado'] = true;
-            header("Location: erro.html");
-            exit;
-        }
-    } catch (Exception $e) {
+    if (mail($para, $assunto, $corpo, $headers)) {
         $_SESSION['form_enviado'] = true;
+        header("Location: sucesso.html");
+        exit;
+    } else {
+        $_SESSION['form_enviado'] = false;
         header("Location: erro.html");
         exit;
     }
@@ -56,4 +51,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     exit;
 }
 ?>
-

@@ -1,7 +1,26 @@
-window.addEventListener("scroll", function() {
-    let header = document.querySelector("header");
-
-    if (header) { // Verifica se o elemento existe
-        header.classList.toggle("rolagem", window.scrollY > 0);
-    }
+const observerH1 = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+        } else {
+            entry.target.classList.remove('show');
+        }
+    });
 });
+
+const observerApresentacao = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show-dois');
+        } else {
+            entry.target.classList.remove('show-dois');
+        }
+    });
+});
+
+
+const h1 = document.querySelectorAll('h1');
+const apresentacao = document.querySelectorAll('.img-apre');
+
+h1.forEach((element) => observerH1.observe(element));
+apresentacao.forEach((element) => observerApresentacao.observe(element));

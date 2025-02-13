@@ -398,6 +398,45 @@ section.cards img {
     text-shadow: greenyellow 1px 0 10px;
 }
 
+.contatos ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.contatos>ul>a {
+    text-decoration: none;
+}
+
+.contatos>ul>a>li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: #f7f7f7;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.contatos>ul>a>li:hover {
+    transform: scale(1.1);
+    /* Aumenta ao passar o mouse */
+    background-color: #eee;
+    /* Cor de destaque */
+}
+
+.contatos>ul>a>li>.icone {
+    font-size: 1.5em;
+    color: inherit;
+    /* Herdar a cor do <li> */
+}
+
+/*FIM CONTATOS*/
+
 #footer {
     background-color: white;
     /* Fundo preto */
@@ -469,46 +508,44 @@ section.cards img {
     margin-top: 10px;
 }
 
-.contatos ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+/* Animação para h1 - Aparece de baixo para cima com leve fade */
+h1 {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity 0.7s ease-out, transform 0.7s ease-out;
 }
 
-.contatos>ul>a {
-    text-decoration: none;
+.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 
-.contatos>ul>a>li {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 50px;
-    height: 50px;
-    background-color: #f7f7f7;
-    border-radius: 50%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, background-color 0.3s;
+/* Animação para img-certificado - Suave descida com rotação sutil */
+.img-apre {
+    opacity: 0;
+    filter: blur(10px);
+    transform: scale(0.8);
+    transition: opacity 1s ease, transform 1s ease, filter 1s ease;
 }
 
-.contatos>ul>a>li:hover {
-    transform: scale(1.1);
-    /* Aumenta ao passar o mouse */
-    background-color: #eee;
-    /* Cor de destaque */
+.show-dois {
+    opacity: 1;
+    filter: blur(0);
+    transform: scale(1);
 }
 
-.contatos>ul>a>li>.icone {
-    font-size: 1.5em;
-    color: inherit;
-    /* Herdar a cor do <li> */
+/* Animação para .proje - Aparição suave com leve subida e rotação */
+.proje {
+    opacity: 0;
+    transform: translateY(100px) rotate(-5deg);
+    transition: opacity .7s ease-in-out, transform .7s ease-in-out;
 }
 
+.show-quatro {
+    opacity: 1;
+    transform: translateY(0) rotate(0deg);
+}
 
-
-/*FIM CONTATOS*/
 
 @media (min-width: 768px) and (max-width: 1024px) {
     section.cards>.card {

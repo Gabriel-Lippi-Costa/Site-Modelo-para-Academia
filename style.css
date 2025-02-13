@@ -442,6 +442,77 @@ form .btn-enviar input:hover {
     transform: scale(1.05);
 }
 
+#footer {
+    background-color: white;
+    /* Fundo preto */
+    color: #fff;
+    /* Texto branco */
+    padding: 20px 0;
+    text-align: center;
+    border-top: 5px solid greenyellow;
+    /* Barra superior vermelha */
+    width: 100%;
+    /* Ocupa toda a largura da tela */
+    position: relative;
+    bottom: 0;
+    margin-top: 100px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    /* Limita o conteúdo no centro */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 0 15px;
+    /* Espaçamento lateral para telas menores */
+}
+
+.footer-logo {
+    width: 120px;
+    /* Tamanho da logo */
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.footer-menu {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    /* Permite quebrar para a próxima linha em telas pequenas */
+    justify-content: center;
+    /* Centraliza o menu */
+}
+
+.footer-menu li {
+    display: inline;
+}
+
+.footer-menu a {
+    color: black;
+    /* Texto branco */
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.footer-menu a:hover {
+    color: #d9534f;
+    /* Texto vermelho ao passar o mouse */
+}
+
+#footer p {
+    font-size: 0.9em;
+    color: black;
+    /* Texto cinza claro */
+    margin-top: 10px;
+}
+
 
 
 /*FIM CONTATOS*/

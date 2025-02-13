@@ -7,6 +7,7 @@
   <title>EliteFit</title>
   <link rel="stylesheet" href="style.css">
   <link rel="shortcut icon" href="favicon/img-favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 
 <body>
@@ -168,30 +169,35 @@
         <img src="unidades/academia-1.jpg" alt="">
         <h2>Centro</h2>
         <h3>Rua da Performance, 150 - Centro, São Paulo - SP, 01000-000</h3>
+        <h3 style="text-decoration: underline;">Segunda a Domingo: 24 horas</h3>
       </section>
 
       <section style="background-color: white;" class="card">
-        <img style="height: 194px;" src="unidades/academia-2.jpg" alt="">
+        <img style="height: 202px;" src="unidades/academia-2.jpg" alt="">
         <h2> Zona Sul</h2>
         <h3>Avenida Corpo em Forma, 321 - Vila Mariana, São Paulo - SP, 04000-000</h3>
+        <h3 style="text-decoration: underline;">Segunda a Domingo: 24 horas</h3>
       </section>
 
       <section style="background-color: white;" class="card">
         <img style="height: 194px;" src="unidades/academia-3.jpg" alt="">
         <h2> Zona Norte</h2>
         <h3>Alameda Saúde Total, 789 - Santana, São Paulo - SP, 02000-000</h3>
+        <h3 style="text-decoration: underline;">Segunda a Domingo: 24 horas</h3>
       </section>
 
       <section style="background-color: white;" class="card">
         <img style="height: 194px;" src="unidades/academia-4.jpg" alt="">
         <h2>Zona Leste</h2>
         <h3>Rua Movimento Perfeito, 456 - Tatuapé, São Paulo - SP, 03000-000</h3>
+        <h3 style="text-decoration: underline;">Segunda a Domingo: 24 horas</h3>
       </section>
 
       <section style="background-color: white;" class="card">
         <img style="height: 194px;" src="unidades/academia-5.jpg" alt="">
         <h2> Zona Oeste</h2>
         <h3>Avenida Energia Vital, 987 - Pinheiros, São Paulo - SP, 05000-000</h3>
+        <h3 style="text-decoration: underline;">Segunda a Domingo: 24 horas</h3>
       </section>
 
     </section>
@@ -204,35 +210,25 @@
 
     <h1>Contatos</h1>
 
-    <div class="interface">
-      <form method="post" action="envia.php">
-        <div class="form-group">
-          <label for="nome">Nome Completo:</label>
-          <input type="text" name="nome" id="nome" placeholder="Digite seu nome completo" autocomplete="name" required>
-        </div>
-
-        <div class="form-group">
-          <label for="email">E-mail:</label>
-          <input type="email" name="email" id="email" placeholder="Digite seu e-mail" autocomplete="email" required>
-        </div>
-
-        <div class="form-group">
-          <label for="tel">Celular:</label>
-          <input type="tel" name="tel" id="tel" placeholder="Digite seu celular" pattern="\(?\d{2}\)?\s?\d{4,5}-\d{4}"
-            title="Formato esperado: (XX) XXXXX-XXXX" autocomplete="tel">
-        </div>
-
-        <div class="form-group">
-          <label for="msg">Mensagem:</label>
-          <textarea name="msg" id="msg" placeholder="Digite sua mensagem" required></textarea>
-        </div>
-
-        <div class="btn-enviar">
-          <input type="submit" value="Enviar">
-        </div>
-      </form>
-
-    </div>
+    <div class="contatos">
+      <ul>
+          <a href="https://www.instagram.com/lippi.tech/" target="_blank" rel="external">
+              <li style="color: red;">
+                  <span class="icone"><i class="bi bi-instagram"></i></span>
+              </li>
+          </a>
+          <a href="https://wa.me/5511948266529" target="_blank" rel="external">
+              <li style="color: rgb(5, 250, 5);">
+                  <span class="icone"><i class="bi bi-whatsapp"></i></span>
+              </li>
+          </a>
+          <a href="tel:+5511948266529">
+              <li style="color: black;">
+                  <span class="icone"><i class="bi bi-telephone"></i></span>
+              </li>
+          </a>
+      </ul>
+  </div>
 
   </section>
 

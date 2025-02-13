@@ -398,50 +398,6 @@ section.cards img {
     text-shadow: greenyellow 1px 0 10px;
 }
 
-form {
-    max-width: 500px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    gap: 10px;
-}
-
-form input, form textarea {
-    width: 100%;
-    background-color: rgb(52, 52, 52);
-    border: 0;
-    outline: 0;
-    padding: 20px 15px;
-    border-radius: 15px;
-    color: #fff;
-    font-size: 18px;
-}
-
-form textarea {
-    resize: none;
-    height: 200px;
-}
-
-form .btn-enviar {
-    margin-top: 20px;
-    text-align: center;
-}
-
-form .btn-enviar input {
-    width: 120px;
-    background-color: greenyellow;
-    color: black;
-    font-weight: 700;
-    cursor: pointer;
-    transition: .2s;
-}
-
-form .btn-enviar input:hover {
-    box-shadow: 0px 0px 8px #00ff08;
-    transform: scale(1.05);
-}
-
 #footer {
     background-color: white;
     /* Fundo preto */
@@ -511,6 +467,43 @@ form .btn-enviar input:hover {
     color: black;
     /* Texto cinza claro */
     margin-top: 10px;
+}
+
+.contatos ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.contatos>ul>a {
+    text-decoration: none;
+}
+
+.contatos>ul>a>li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: #f7f7f7;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.contatos>ul>a>li:hover {
+    transform: scale(1.1);
+    /* Aumenta ao passar o mouse */
+    background-color: #eee;
+    /* Cor de destaque */
+}
+
+.contatos>ul>a>li>.icone {
+    font-size: 1.5em;
+    color: inherit;
+    /* Herdar a cor do <li> */
 }
 
 

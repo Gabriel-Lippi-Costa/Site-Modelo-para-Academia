@@ -61,7 +61,7 @@ header .nav-list {
 
 header .nav-list li {
     font-family: "Merienda", serif;
-    font-size: 18px;
+    font-size: 24px;
     margin-left: 32px;
 }
 
@@ -591,8 +591,9 @@ h1 {
         backdrop-filter: blur(10px);
         flex-direction: column;
         align-items: center;
-        justify-content: space-around;
+        justify-content: flex-start;
         /* Reduz o espaçamento vertical */
+        gap: 60px;
         transform: translateX(100%);
         transition: transform 0.3s ease-in;
     }
